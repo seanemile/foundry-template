@@ -1,2 +1,17 @@
-[ci]
-fuzz-runs = 10_000
+[production]
+solc = '0.8.14'
+via_ir = true
+src = 'src'
+out = 'out'
+libs = 'lib'
+# lib = [ "node_modules", "lib"]
+test = 'test'
+fuzz_runs = 5000
+fuzz_max_global_rejects = 2_000_000
+optimizer_runs = 19_066
+
+
+[testing]
+via_ir= false
+out = 'testing'
+fuzz_runs = 1000
